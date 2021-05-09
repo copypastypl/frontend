@@ -18,7 +18,11 @@ module.exports = {
         container: {
             center: true
         },
-        extend: {}
+        extend: {
+            spacing: {
+                '116': '29rem'
+            }
+        }
     },
     variants: {},
     plugins: [require('@tailwindcss/typography')]

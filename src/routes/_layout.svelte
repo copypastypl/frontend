@@ -1,9 +1,9 @@
-<script>
-    import Nav from '../components/Nav.svelte'
-</script>
-
-<Nav />
-
-<main class="h-full w-full flex justify-center items-center bg-gray-200">
+<main class="h-full w-full">
     <slot />
 </main>
+
+<style>
+    main {
+        background: #fafafa;
+    }
+</style>
