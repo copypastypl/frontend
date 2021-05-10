@@ -20,13 +20,13 @@ module.exports = {
         },
         extend: {
             spacing: {
-                '116': '29rem'
+                116: '29rem'
+            },
+            colors: {
+                main: '#FAFAFA',
+                'login-box': '#FFFFFF',
+                'login-button': '#FFFFFF'
             }
-        },
-        colors: {
-            'main': '#FAFAFA',
-            'login-box': '#FFFFFF',
-            'login-button': '#FFFFFF',
         }
     },
     variants: {},
