@@ -1,9 +1,3 @@
-<main class="h-full w-full">
+<main class="h-full w-full bg-main">
     <slot />
 </main>
-
-<style>
-    main {
-        background: #fafafa;
-    }
-</style>

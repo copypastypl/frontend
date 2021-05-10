@@ -22,6 +22,11 @@ module.exports = {
             spacing: {
                 '116': '29rem'
             }
+        },
+        colors: {
+            'main': '#FAFAFA',
+            'login-box': '#FFFFFF',
+            'login-button': '#FFFFFF',
         }
     },
     variants: {},

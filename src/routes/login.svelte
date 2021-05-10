@@ -13,7 +13,7 @@
 
 <div class="h-full w-full flex justify-center items-center">
     <div
-        class="login-box w-96 h-116 p-12 sm:shadow-lg sm:border transition duration-700 ease-in-out"
+        class="login-box bg-login-box w-96 h-116 p-12 sm:shadow-lg sm:border transition duration-700 ease-in-out"
         class:rotated={isRegistering}
     >
         {#if showFrontSide}
@@ -28,7 +28,7 @@
                     </h2>
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-2">
                     <input
                         class="login-input"
                         id="username"
@@ -37,7 +37,7 @@
                     />
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-2">
                     <input
                         class="login-input"
                         id="password"
@@ -71,7 +71,7 @@
                     </h1>
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-2">
                     <input
                         class="login-input"
                         id="username"
@@ -80,7 +80,7 @@
                     />
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-2">
                     <input
                         class="login-input"
                         id="email"
@@ -89,7 +89,7 @@
                     />
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-2">
                     <input
                         class="login-input"
                         id="password"
@@ -98,7 +98,7 @@
                     />
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-2">
                     <input
                         class="login-input"
                         id="repeated-password"
@@ -128,7 +128,7 @@
 
 <style>
     .login-button {
-        @apply relative z-0 bg-white transition duration-500 ease-in-out text-white font-semibold py-2 px-4 w-full focus:outline-none border border-black;
+        @apply relative z-0 bg-login-button transition duration-500 ease-in-out text-white font-semibold py-2 px-4 w-full focus:outline-none border border-black;
     }
 
     .login-input {
@@ -141,6 +141,11 @@
 
     .login-header {
         @apply mb-9;
+    }
+
+    .login-box-front,
+    .login-box-back {
+        @apply p-12 -ml-12 -mt-12 absolute h-full w-full;
     }
 
     .login-button::before {
@@ -165,18 +170,12 @@
     }
 
     .login-box {
-        /* background: #fff; */
         transform-style: preserve-3d;
         perspective: 1000px;
     }
 
     .rotated {
         transform: rotateY(180deg);
-    }
-
-    .login-box-front,
-    .login-box-back {
-        @apply p-12 -ml-12 -mt-12 absolute h-full w-full;
     }
 
     .login-box-back {
