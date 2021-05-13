@@ -25,7 +25,8 @@ module.exports = {
             colors: {
                 main: '#FAFAFA',
                 'login-box': '#FFFFFF',
-                'login-button': '#FFFFFF'
+                'login-button': '#FFFFFF',
+                nav: '#FAFAFA'
             }
         }
     },

@@ -13,7 +13,7 @@
 
 <div class="h-full w-full flex justify-center items-center">
     <div
-        class="login-box bg-login-box w-96 h-116 p-12 sm:shadow-lg sm:border transition duration-700 ease-in-out"
+        class="login-box bg-login-box w-96 h-116 p-12 sm:shadow-lg sm:border transition duration-600 ease-in-out"
         class:rotated={isRegistering}
     >
         {#if showFrontSide}
@@ -128,7 +128,7 @@
 
 <style>
     .login-button {
-        @apply relative z-0 bg-login-button transition duration-500 ease-in-out text-white font-semibold py-2 px-4 w-full focus:outline-none border border-black;
+        @apply relative z-0 bg-login-button text-white font-semibold py-2 px-4 w-full focus:outline-none border border-black;
     }
 
     .login-input {
@@ -156,7 +156,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: -1;
-        transition: all 0.6s ease;
+        transition: all 0.5s ease;
         width: 0;
         height: 100%;
     }

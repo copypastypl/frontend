@@ -1,46 +1,69 @@
-<nav class="h-12 fixed w-full flex justify-center">
+<nav class="h-12 fixed w-full flex justify-center border-right border border-t-0 border-r-0 border-l-0 border-black bg-nav">
     <ul class="m-0 p-0 h-full w-2/4 flex">
-        <li class="w-24 h-full">
+        <li class="nav-link-item">
             <a
                 href="/"
-                class="text-white no-underline flex h-full flex justify-center items-center p-0 py-4 text-base"
+                class="nav-link-a"
             >
-                Link1
+                <div class="text">Link1</div>
             </a>
         </li>
-        <li class="w-24 h-full">
+        <li class="nav-link-item">
             <a
                 href="/"
-                class="text-white no-underline flex h-full flex justify-center items-center p-0 py-4 text-base"
+                class="nav-link-a"
             >
-                Link2
+                <div class="text">Link2</div>
             </a>
         </li>
-        <li class="w-24 h-full">
+        <li class="nav-link-item">
             <a
                 href="/"
-                class="text-white no-underline flex h-full flex justify-center items-center p-0 py-4 text-base"
+                class="nav-link-a"
             >
-                Link3
+                <div class="text">Link3</div>
             </a>
         </li>
-        <li class="w-24 h-full bg-red-500 ml-auto">
+        <li class="nav-link-item bg-red-500 ml-auto">
             <a
                 href="/"
-                class="text-white no-underline flex h-full flex justify-center items-center p-0 py-4 text-base justify-self-end"
+                class="nav-link-a justify-self-end"
             >
-                Log out
+            <div class="text logout-text text-red-500">Log out</div>
             </a>
         </li>
     </ul>
 </nav>
 
 <style>
-    nav {
-        background-color: #495057;
+    .nav-link-a {
+        @apply no-underline flex h-full flex justify-center items-center p-0 py-4 relative z-0 bg-nav text-white font-normal text-base;
     }
 
-    li:hover {
-        background: #343a40;
+    .text {
+        mix-blend-mode: difference;
+    }
+
+    .logout-text {
+        mix-blend-mode: normal;
+    }
+
+    .nav-link-item {
+        @apply w-24 h-full;
+    }
+
+    .nav-link-a::before {
+        content: '';
+        background-color: black;
+        position: absolute;
+        bottom: 0%;
+        z-index: -1;
+        transition: all 0.4s ease;
+        width: 100%;
+        height: 0;
+    }
+
+    .nav-link-a:hover::before {
+        height: 100%;
     }
 </style>
