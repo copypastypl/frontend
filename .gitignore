@@ -5,3 +5,4 @@ yarn-error.log
 __sapper__/
 static/tailwind.css
 .vercel
+.vscode

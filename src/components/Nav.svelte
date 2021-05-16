@@ -37,7 +37,7 @@
 
 <style>
     .nav-link-a {
-        @apply no-underline flex h-full flex justify-center items-center p-0 py-4 relative z-0 bg-nav text-white font-normal text-base;
+        @apply no-underline h-full flex justify-center items-center p-0 py-4 relative z-0 bg-nav text-white font-normal text-base;
     }
 
     .text {

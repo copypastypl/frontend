@@ -128,7 +128,7 @@
 
 <style>
     .login-button {
-        @apply relative z-0 bg-login-button text-white font-semibold py-2 px-4 w-full focus:outline-none border border-black;
+        @apply z-0 bg-login-button text-white font-semibold py-2 px-4 w-full focus:outline-none border border-black;
     }
 
     .login-input {
