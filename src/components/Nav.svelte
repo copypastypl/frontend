@@ -1,4 +1,4 @@
-<nav class="h-12 fixed w-full flex justify-center border-right border border-t-0 border-r-0 border-l-0 border-black bg-nav">
+<nav class="h-12 fixed w-full flex justify-center border-right border border-t-0 border-r-0 border-l bg-nav">
     <ul class="m-0 p-0 h-full w-2/4 flex">
         <li class="nav-link-item">
             <a
@@ -29,7 +29,7 @@
                 href="/"
                 class="nav-link-a justify-self-end"
             >
-            <div class="text logout-text text-red-500">Log out</div>
+                <div class="text logout-text text-red-500">Log out</div>
             </a>
         </li>
     </ul>

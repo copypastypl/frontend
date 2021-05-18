@@ -7,13 +7,13 @@
 
         setTimeout(() => {
             showFrontSide = !showFrontSide
-        }, 250)
+        }, 180)
     }
 </script>
 
 <div class="h-full w-full flex justify-center items-center">
     <div
-        class="login-box bg-login-box w-96 h-116 p-12 sm:shadow-lg sm:border transition duration-600 ease-in-out"
+        class="login-box bg-login-box w-96 h-116 p-12 sm:shadow-lg sm:border transition duration-500 ease-in-out"
         class:rotated={isRegistering}
     >
         {#if showFrontSide}
@@ -128,7 +128,7 @@
 
 <style>
     .login-button {
-        @apply z-0 bg-login-button text-white font-semibold py-2 px-4 w-full focus:outline-none border border-black;
+        @apply relative z-0 bg-login-button text-white font-semibold py-2 px-4 w-full focus:outline-none border border-black;
     }
 
     .login-input {
