@@ -1,34 +1,24 @@
-<nav class="h-12 fixed w-full flex justify-center border-right border border-t-0 border-r-0 border-l bg-nav">
+<nav
+    class="h-12 fixed w-full flex justify-center border-right border border-t-0 border-r-0 border-l bg-nav"
+>
     <ul class="m-0 p-0 h-full w-2/4 flex">
         <li class="nav-link-item">
-            <a
-                href="/"
-                class="nav-link-a"
-            >
+            <a href="/" class="nav-link-a">
                 <div class="text">Link1</div>
             </a>
         </li>
         <li class="nav-link-item">
-            <a
-                href="/"
-                class="nav-link-a"
-            >
+            <a href="/" class="nav-link-a">
                 <div class="text">Link2</div>
             </a>
         </li>
         <li class="nav-link-item">
-            <a
-                href="/"
-                class="nav-link-a"
-            >
+            <a href="/" class="nav-link-a">
                 <div class="text">Link3</div>
             </a>
         </li>
         <li class="nav-link-item bg-red-500 ml-auto">
-            <a
-                href="/"
-                class="nav-link-a justify-self-end"
-            >
+            <a href="/" class="nav-link-a justify-self-end">
                 <div class="text logout-text text-red-500">Log out</div>
             </a>
         </li>

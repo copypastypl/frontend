@@ -33,7 +33,7 @@
                         class="login-input"
                         id="username"
                         type="text"
-                        placeholder="Username"
+                        placeholder="Nazwa użytkownika"
                     />
                 </div>
 
@@ -42,13 +42,13 @@
                         class="login-input"
                         id="password"
                         type="password"
-                        placeholder="Password"
+                        placeholder="Hasło"
                     />
                 </div>
 
                 <div class="mt-4">
                     <button class="login-button" type="button">
-                        <div class="text">Log in</div>
+                        <div class="text">Zaloguj się</div>
                     </button>
                 </div>
 
@@ -57,10 +57,12 @@
                         class="login-text-button"
                         on:click={changeRegisteringState}
                     >
-                        Register
+                        Zarejestruj się
                     </button>
 
-                    <a class="login-text-button" href="/"> Forgot Password? </a>
+                    <a class="login-text-button" href="/">
+                        Zapomniałeś hasła?
+                    </a>
                 </div>
             </div>
         {:else}
@@ -76,7 +78,7 @@
                         class="login-input"
                         id="username"
                         type="text"
-                        placeholder="Username"
+                        placeholder="Nazwa użytkownika"
                     />
                 </div>
 
@@ -94,7 +96,7 @@
                         class="login-input"
                         id="password"
                         type="password"
-                        placeholder="Password"
+                        placeholder="Hasło"
                     />
                 </div>
 
@@ -103,13 +105,13 @@
                         class="login-input"
                         id="repeated-password"
                         type="repeated-password"
-                        placeholder="Repeat password"
+                        placeholder="Powtórzone hasło"
                     />
                 </div>
 
                 <div class="mt-4">
                     <button class="login-button" type="button">
-                        <div class="text">Register</div>
+                        <div class="text">Zarejestruj się</div>
                     </button>
                 </div>
 
@@ -118,7 +120,7 @@
                         class="login-text-button"
                         on:click={changeRegisteringState}
                     >
-                        Log in
+                        Zaloguj się
                     </button>
                 </div>
             </div>

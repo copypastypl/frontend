@@ -6,24 +6,24 @@
 
 <div class="h-full w-full flex justify-center">
     <div class="h-full m-4 lg:m-0 lg:w-2/4 pt-24">
-        <div class="w-full mb-16">
+        <div class="w-full mb-16 shadow-lg">
             <div class="sm:p-12 border">
-                <div class="header">
-                    <div class="flex w-full items-center m-0">
-                        <img
-                            class="author-avatar m-2"
-                            src="https://cdn.discordapp.com/avatars/766005840154853430/2fb8c06f538d6b155e6ad9cca3c3e7d2.png"
-                            alt="Avatar"
-                        />
+                <div class="flex w-full items-center m-0">
+                    <img
+                        class="author-avatar m-2 rounded"
+                        src="https://cdn.discordapp.com/avatars/766005840154853430/2fb8c06f538d6b155e6ad9cca3c3e7d2.png"
+                        alt="Avatar"
+                    />
 
-                        <div class="flex-col">
-                            <div class="font-bold">Lorem, ipsum.</div>
-                            <div>2 days ago</div>
-                        </div>
+                    <div class="flex-col w-full">
+                        <div class="font-bold">Lorem, ipsum.</div>
+                        <div>2 days ago</div>
                     </div>
                 </div>
 
-                <div class="content mx-16">
+                <div class="border-t mb-2 mx-2 mt-1" />
+
+                <div class="mx-2">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Sequi vel asperiores eos molestiae iure vitae porro, esse,
                     possimus, delectus nihil nam quia nobis id sed dolore eius
