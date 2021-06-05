@@ -6,3 +6,5 @@ __sapper__/
 static/tailwind.css
 .vercel
 .vscode
+.routify
+dist/
