@@ -1,12 +1,15 @@
+<script>
+    import Modal from 'svelte-simple-modal'
+    import AddPostButton from './AddPostButton.svelte'
+</script>
+
 <nav
     class="h-12 fixed w-full flex justify-center border-right border border-t-0 border-r-0 border-l bg-nav"
 >
     <ul class="m-0 p-0 h-full w-2/4 flex">
-        <li class="nav-link-item">
-            <a href="/" class="nav-link-a">
-                <div class="text">Link1</div>
-            </a>
-        </li>
+        <Modal>
+            <AddPostButton />
+        </Modal>
         <li class="nav-link-item">
             <a href="/" class="nav-link-a">
                 <div class="text">Link2</div>
