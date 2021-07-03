@@ -6,7 +6,7 @@
 <nav
     class="h-12 fixed w-full flex justify-center border-right border border-t-0 border-r-0 border-l bg-nav"
 >
-    <ul class="m-0 p-0 h-full w-2/4 flex">
+    <ul class="m-0 p-0 h-full w-5/12 flex">
         <Modal>
             <AddPostButton />
         </Modal>

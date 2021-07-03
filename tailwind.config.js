@@ -26,7 +26,8 @@ module.exports = {
                 main: '#FAFAFA',
                 'login-box': '#FFFFFF',
                 'login-button': '#FFFFFF',
-                nav: '#FAFAFA'
+                nav: '#FAFAFA',
+                'post-section': '#f6f6f6'
             }
         }
     },
