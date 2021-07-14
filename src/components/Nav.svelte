@@ -1,28 +1,30 @@
 <script>
     import Modal from 'svelte-simple-modal'
     import AddPostButton from './AddPostButton.svelte'
+    import SearchBar from './search-bar/SearchBar.svelte'
 </script>
 
 <nav
     class="h-12 fixed w-full flex justify-center border-right border border-t-0 border-r-0 border-l bg-nav"
 >
-    <ul class="m-0 p-0 h-full w-5/12 flex">
-        <Modal>
-            <AddPostButton />
-        </Modal>
-        <li class="nav-link-item">
-            <a href="/" class="nav-link-a">
-                <div class="text">Link2</div>
-            </a>
+    <ul class="m-0 p-0 h-full lg:w-5/12 flex">
+        <li
+            class="nav-link-item no-underline flex justify-center items-center font-semibold text-lg"
+        >
+            <!-- <Modal>
+                <AddPostButton />
+            </Modal> -->
+
+            Copypasty
         </li>
-        <li class="nav-link-item">
-            <a href="/" class="nav-link-a">
-                <div class="text">Link3</div>
-            </a>
+
+        <li class="w-full mx-12 h-52">
+            <SearchBar />
         </li>
-        <li class="nav-link-item bg-red-500 ml-auto">
-            <a href="/" class="nav-link-a justify-self-end">
-                <div class="text logout-text text-red-500">Log out</div>
+
+        <li class="nav-link-item bg-login-button">
+            <a href="/" class="nav-link-a text-black">
+                <div>Zaloguj się</div>
             </a>
         </li>
     </ul>
@@ -30,19 +32,13 @@
 
 <style>
     .nav-link-a {
-        @apply no-underline h-full flex justify-center items-center p-0 py-4 relative z-0 bg-nav text-white font-normal text-base;
-    }
+        @apply no-underline h-full flex justify-center items-center py-4 w-24 relative z-0 bg-nav font-normal text-base;
 
-    .text {
-        mix-blend-mode: difference;
-    }
-
-    .logout-text {
-        mix-blend-mode: normal;
+        transition: all 0.3s;
     }
 
     .nav-link-item {
-        @apply w-24 h-full;
+        @apply h-full;
     }
 
     .nav-link-a::before {
@@ -58,5 +54,9 @@
 
     .nav-link-a:hover::before {
         height: 100%;
+    }
+
+    .nav-link-a:hover {
+        color: #fff;
     }
 </style>

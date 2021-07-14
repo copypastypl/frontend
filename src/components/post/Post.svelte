@@ -16,7 +16,6 @@
 
                 <div class="w-full flex flex-col justify-center">
                     <div class="font-semibold">Username</div>
-                    <!-- <div class="px-2">•</div> -->
                     <div>2 days ago</div>
                 </div>
             </div>
