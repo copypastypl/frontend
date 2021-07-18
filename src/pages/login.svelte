@@ -20,11 +20,10 @@
             <div class="login-box-front">
                 <div class="login-header">
                     <h1 class="text-center font-bold text-4xl">
-                        Lorem, ipsum.
+                        Logowanie
                     </h1>
                     <h2 class="text-center font-normal text-lg mt-3">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit.
+                        Zaloguj się, aby korzystać z pełnych możliwości serwisu
                     </h2>
                 </div>
 
@@ -69,7 +68,7 @@
             <div class="login-box-back">
                 <div class="login-header">
                     <h1 class="text-center font-bold text-4xl">
-                        Lorem, ipsum.
+                        Rejestracja
                     </h1>
                 </div>
 
