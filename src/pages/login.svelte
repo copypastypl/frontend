@@ -1,4 +1,6 @@
 <script>
+    import AnimatedButton from '../components/AnimatedButton.svelte'
+
     let isRegistering = false
     let showFrontSide = true
 
@@ -19,9 +21,7 @@
         {#if showFrontSide}
             <div class="login-box-front">
                 <div class="login-header">
-                    <h1 class="text-center font-bold text-4xl">
-                        Logowanie
-                    </h1>
+                    <h1 class="text-center font-bold text-4xl">Logowanie</h1>
                     <h2 class="text-center font-normal text-lg mt-3">
                         Zaloguj się, aby korzystać z pełnych możliwości serwisu
                     </h2>
@@ -46,9 +46,11 @@
                 </div>
 
                 <div class="mt-4">
-                    <button class="login-button" type="button">
+                    <AnimatedButton
+                        class="w-full m-0 bg-login-button text-white font-semibold border-black border py-2 px-4"
+                    >
                         <div class="text">Zaloguj się</div>
-                    </button>
+                    </AnimatedButton>
                 </div>
 
                 <div class="mt-3 flex justify-between">
@@ -67,9 +69,7 @@
         {:else}
             <div class="login-box-back">
                 <div class="login-header">
-                    <h1 class="text-center font-bold text-4xl">
-                        Rejestracja
-                    </h1>
+                    <h1 class="text-center font-bold text-4xl">Rejestracja</h1>
                 </div>
 
                 <div class="mt-2">
@@ -109,9 +109,11 @@
                 </div>
 
                 <div class="mt-4">
-                    <button class="login-button" type="button">
-                        <div class="text">Zarejestruj się</div>
-                    </button>
+                    <AnimatedButton
+                        class="w-full m-0 bg-login-button text-white font-semibold border-black border py-2 px-4"
+                    >
+                        <div class="text">Zaloguj się</div>
+                    </AnimatedButton>
                 </div>
 
                 <div class="mt-3 flex justify-between">
@@ -128,10 +130,6 @@
 </div>
 
 <style>
-    .login-button {
-        @apply relative z-0 bg-login-button text-white font-semibold py-2 px-4 w-full focus:outline-none border border-black;
-    }
-
     .login-input {
         @apply shadow appearance-none border w-full py-2 px-3 transition duration-500 ease-in-out focus:outline-none focus:ring-1 focus:ring-black;
     }
@@ -147,23 +145,6 @@
     .login-box-front,
     .login-box-back {
         @apply p-12 -ml-12 -mt-12 absolute h-full w-full;
-    }
-
-    .login-button::before {
-        content: '';
-        background-color: black;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        transition: all 0.5s ease;
-        width: 0;
-        height: 100%;
-    }
-
-    .login-button:hover::before {
-        width: 100%;
     }
 
     .text {
