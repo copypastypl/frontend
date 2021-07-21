@@ -1,6 +1,4 @@
 <script>
-    import Modal from 'svelte-simple-modal'
-    import AddPostButton from './AddPostButton.svelte'
     import AnimatedButton from './AnimatedButton.svelte'
     import SearchBar from './search-bar/SearchBar.svelte'
 </script>
@@ -25,7 +23,7 @@
 
         <li class="nav-link-item w-24 bg-login-button">
             <AnimatedButton textFade class="w-24 h-full text-black bg-nav">
-                Zaloguj się
+                <a href="/login" class="w-full h-full flex justify-center items-center">Zaloguj się</a>
             </AnimatedButton>
         </li>
     </ul>

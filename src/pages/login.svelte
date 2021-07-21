@@ -13,7 +13,7 @@
     }
 </script>
 
-<div class="h-full w-full flex justify-center items-center">
+<div class="h-screen w-full flex justify-center items-center">
     <div
         class="login-box bg-login-box w-96 h-116 p-12 sm:shadow-lg sm:border transition duration-500 ease-in-out"
         class:rotated={isRegistering}
@@ -27,31 +27,25 @@
                     </h2>
                 </div>
 
-                <div class="mt-2">
-                    <input
-                        class="login-input"
-                        id="username"
-                        type="text"
-                        placeholder="Nazwa użytkownika"
-                    />
-                </div>
+                <input
+                    class="login-input mt-2"
+                    id="username"
+                    type="text"
+                    placeholder="Nazwa użytkownika"
+                />
 
-                <div class="mt-2">
-                    <input
-                        class="login-input"
-                        id="password"
-                        type="password"
-                        placeholder="Hasło"
-                    />
-                </div>
+                <input
+                    class="login-input mt-2"
+                    id="password"
+                    type="password"
+                    placeholder="Hasło"
+                />
 
-                <div class="mt-4">
-                    <AnimatedButton
-                        class="w-full m-0 bg-login-button text-white font-semibold border-black border py-2 px-4"
-                    >
-                        <div class="text">Zaloguj się</div>
-                    </AnimatedButton>
-                </div>
+                <AnimatedButton
+                    class="w-full m-0 bg-login-button text-white font-semibold border-black border py-2 px-4 mt-4"
+                >
+                    <div class="text">Zaloguj się</div>
+                </AnimatedButton>
 
                 <div class="mt-3 flex justify-between">
                     <button
@@ -72,49 +66,39 @@
                     <h1 class="text-center font-bold text-4xl">Rejestracja</h1>
                 </div>
 
-                <div class="mt-2">
-                    <input
-                        class="login-input"
-                        id="username"
-                        type="text"
-                        placeholder="Nazwa użytkownika"
-                    />
-                </div>
+                <input
+                    class="login-input mt-2"
+                    id="username"
+                    type="text"
+                    placeholder="Nazwa użytkownika"
+                />
 
-                <div class="mt-2">
-                    <input
-                        class="login-input"
-                        id="email"
-                        type="email"
-                        placeholder="Email"
-                    />
-                </div>
+                <input
+                    class="login-input mt-2"
+                    id="email"
+                    type="email"
+                    placeholder="Email"
+                />
 
-                <div class="mt-2">
-                    <input
-                        class="login-input"
-                        id="password"
-                        type="password"
-                        placeholder="Hasło"
-                    />
-                </div>
+                <input
+                    class="login-input mt-2"
+                    id="password"
+                    type="password"
+                    placeholder="Hasło"
+                />
 
-                <div class="mt-2">
-                    <input
-                        class="login-input"
-                        id="repeated-password"
-                        type="repeated-password"
-                        placeholder="Powtórzone hasło"
-                    />
-                </div>
+                <input
+                    class="login-input mt-2"
+                    id="repeated-password"
+                    type="repeated-password"
+                    placeholder="Powtórzone hasło"
+                />
 
-                <div class="mt-4">
-                    <AnimatedButton
-                        class="w-full m-0 bg-login-button text-white font-semibold border-black border py-2 px-4"
-                    >
-                        <div class="text">Zaloguj się</div>
-                    </AnimatedButton>
-                </div>
+                <AnimatedButton
+                    class="w-full m-0 bg-login-button text-white font-semibold border-black border py-2 px-4 mt-4"
+                >
+                    <div class="text">Zaloguj się</div>
+                </AnimatedButton>
 
                 <div class="mt-3 flex justify-between">
                     <button
