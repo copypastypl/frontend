@@ -67,29 +67,4 @@
         width: 40px;
         height: 40px;
     }
-
-    /* .button {
-        @apply relative z-0 bg-login-button text-white font-semibold py-2 px-4 focus:outline-none border border-black;
-    }
-
-    .button::before {
-        content: '';
-        background-color: black;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        transition: all 0.5s ease;
-        width: 0;
-        height: 100%;
-    }
-
-    .button:hover::before {
-        width: 100%;
-    }
-
-    .text {
-        mix-blend-mode: difference;
-    } */
 </style>

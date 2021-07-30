@@ -2,7 +2,7 @@
     export let textFade = false
 </script>
 
-<button class="button no-underline flex justify-center items-center relative z-0 font-normal text-base focus:outline-none {$$props.class}" class:text-fade={textFade} type="button">
+<button class="button no-underline flex justify-center items-center relative z-0 font-normal text-base focus:outline-none {$$props.class}" class:text-fade={textFade} on:click>
     <slot />
 </button>
 
