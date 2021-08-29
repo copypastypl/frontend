@@ -1,5 +1,5 @@
 <script>
-    import AnimatedButton from './AnimatedButton.svelte'
+    import AnimatedButton from '../AnimatedButton.svelte'
     import SearchBar from './search-bar/SearchBar.svelte'
 </script>
 

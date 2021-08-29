@@ -1,5 +1,6 @@
 <script>
     import AnimatedButton from '../components/AnimatedButton.svelte'
+    import { toastError, toastSuccess } from '../toasts'
 
     let isRegistering = false
     let showFrontSide = true
@@ -39,6 +40,7 @@
             }
         }).then((response) => {
             if (response.ok) {
+                toastSuccess("Zarejestrowano pomyślnie!");
                 changeRegisteringState()
             }
         })
@@ -64,9 +66,11 @@
                     localStorage.accessToken = data.access
                     localStorage.refreshToken = data.refresh
 
-                    location.href = "/"
+                    toastSuccess("Zalogowano pomyślnie!");
+
+                    location.href = '/'
                 } else {
-                    error = "Niepoprawne dane logowania"
+                    toastError('Niepoprawne dane logowania!')
                 }
             })
     }
