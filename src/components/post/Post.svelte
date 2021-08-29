@@ -4,10 +4,10 @@
     import { plus, minus } from 'svelte-awesome/icons'
 </script>
 
-<div class="w-full mb-16 shadow-lg">
+<div class="w-full mb-16 shadow-2xl">
     <div class="border">
         <div class="w-full sm:px-12 sm:py-2 m-0 bg-post-section border-b">
-            <div class=" flex text-sm">
+            <div class="flex text-sm">
                 <img
                     class="author-avatar mr-2 sm:rounded"
                     src="https://cdn.discordapp.com/avatars/766005840154853430/2fb8c06f538d6b155e6ad9cca3c3e7d2.png"

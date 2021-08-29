@@ -9,6 +9,8 @@
     let password = ''
     let repeatedPassword = ''
 
+    let error = ''
+
     const changeRegisteringState = () => {
         isRegistering = !isRegistering
 
@@ -46,8 +48,6 @@
         if (username.length === 0) return
         if (password.length === 0) return
 
-        console.log('tak')
-
         fetch('https://testy.copypasty.pl/users/token/', {
             method: 'POST',
             body: JSON.stringify({
@@ -60,17 +60,21 @@
         })
             .then((response) => response.json())
             .then((data) => {
-                localStorage.accessToken = data.access
-                localStorage.refreshToken = data.refresh
+                if (data.access && data.refresh) {
+                    localStorage.accessToken = data.access
+                    localStorage.refreshToken = data.refresh
 
-                location.href = "/"
+                    location.href = "/"
+                } else {
+                    error = "Niepoprawne dane logowania"
+                }
             })
     }
 </script>
 
 <div class="h-screen w-full flex justify-center items-center">
     <div
-        class="login-box bg-login-box w-96 h-116 p-12 sm:shadow-lg sm:border transition duration-500 ease-in-out"
+        class="login-box bg-login-box w-96 h-116 p-12 sm:shadow-2xl sm:border transition duration-500 ease-in-out"
         class:rotated={isRegistering}
     >
         {#if showFrontSide}
@@ -99,6 +103,8 @@
                     bind:value={password}
                     required
                 />
+
+                <p class="text-red-500 text-center mt-3">{error}</p>
 
                 <AnimatedButton
                     class="w-full m-0 bg-login-button text-white font-semibold border-black border py-2 px-4 mt-4"
