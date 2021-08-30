@@ -10,8 +10,6 @@
     let password = ''
     let repeatedPassword = ''
 
-    let error = ''
-
     const changeRegisteringState = () => {
         isRegistering = !isRegistering
 
@@ -21,12 +19,35 @@
     }
 
     const handleRegister = () => {
-        if (username.length === 0) return
-        if (email.length === 0) return
-        if (password.length === 0) return
-        if (repeatedPassword.length === 0) return
-        if (password !== repeatedPassword) return
-        if (!/^[^\s@]+@[^\s@]+$/.test(email)) return
+        if (username.length === 0) {
+            toastError('Niepoprawna nazwa użytkownika')
+            return
+        }
+
+        if (email.length === 0) {
+            toastError('Niepoprawny adres email')
+            return
+        }
+
+        if (password.length === 0) {
+            toastError('Niepoprawne hasło')
+            return
+        }
+
+        if (repeatedPassword.length === 0) {
+            toastError('Niepoprawne hasło')
+            return
+        }
+
+        if (password !== repeatedPassword) {
+            toastError('Podane hasła nie są identyczne')
+            return
+        }
+
+        if (!/^[^\s@]+@[^\s@]+$/.test(email)) {
+            toastError('Niepoprawny adres email')
+            return
+        }
 
         fetch('https://testy.copypasty.pl/users/create/', {
             method: 'POST',
@@ -38,12 +59,22 @@
             headers: {
                 'Content-Type': 'application/json'
             }
-        }).then((response) => {
-            if (response.ok) {
-                toastSuccess("Zarejestrowano pomyślnie!");
-                changeRegisteringState()
-            }
         })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.username && data.username[0] === "A user with that username already exists.") {
+                    toastError("Użytkownik z tą nazwą już istnieje")
+                    return
+                }
+
+                if (data.email && data.email[0] === "user with this email address already exists.") {
+                    toastError("Użytkownik z tym adresem email już istnieje")
+                    return
+                }
+
+                toastSuccess("Zarejestrowano pomyślnie!")
+                changeRegisteringState()
+            })
     }
 
     const handleLogin = () => {
@@ -66,7 +97,7 @@
                     localStorage.accessToken = data.access
                     localStorage.refreshToken = data.refresh
 
-                    toastSuccess("Zalogowano pomyślnie!");
+                    toastSuccess('Zalogowano pomyślnie!')
 
                     location.href = '/'
                 } else {
@@ -107,8 +138,6 @@
                     bind:value={password}
                     required
                 />
-
-                <p class="text-red-500 text-center mt-3">{error}</p>
 
                 <AnimatedButton
                     class="w-full m-0 bg-login-button text-white font-semibold border-black border py-2 px-4 mt-4"
