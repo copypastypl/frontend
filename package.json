@@ -38,6 +38,8 @@
         "@sveltejs/svelte-virtual-list": "^3.0.1",
         "@tailwindcss/typography": "^0.4.1",
         "svelte-awesome": "^2.3.2",
-        "svelte-simple-modal": "^0.10.4"
+        "svelte-simple-modal": "^0.10.4",
+        "yup": "^0.32.9",
+        "yup-locale-pl": "^0.1.2"
     }
 }
