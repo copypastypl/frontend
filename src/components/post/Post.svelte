@@ -18,7 +18,7 @@
 
                 <div class="w-full flex flex-col justify-center">
                     <div class="font-semibold">{post.author}</div>
-                    <div>2 days ago</div>
+                    <div>{new Date(Date.parse(post.created_at)).toLocaleTimeString("pl-PL").slice(0, -3)}</div>
                 </div>
             </div>
 
