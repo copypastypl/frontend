@@ -2,6 +2,8 @@
     import Comment from './Comment.svelte'
     import Icon from 'svelte-awesome'
     import { plus, minus } from 'svelte-awesome/icons'
+
+    export let post;
 </script>
 
 <div class="w-full mb-16 shadow-2xl">
@@ -15,15 +17,15 @@
                 />
 
                 <div class="w-full flex flex-col justify-center">
-                    <div class="font-semibold">Username</div>
+                    <div class="font-semibold">{post.author}</div>
                     <div>2 days ago</div>
                 </div>
             </div>
 
             <div class="py-1 mt-1 font-semibold text-2xl">
-                Lorem ipsum dolor sit amet consectetur.
+                {post.title}
             </div>
-            <!-- 
+            <!--
             <div class="flex justify-end items-center w-full post-options">
                 <Icon class="mr-4" data={plus} scale="1.2" />
                 <Icon data={minus} scale="1.2" />
@@ -31,17 +33,7 @@
         </div>
 
         <div class="px-4 py-4 sm:p-12 sm:py-6 border-b">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi vel
-            asperiores eos molestiae iure vitae porro, esse, possimus, delectus
-            nihil nam quia nobis id sed dolore eius quisquam enim odio autem
-            suscipit ipsa veniam. Magnam odio, nihil quidem aliquid sunt porro,
-            modi aliquam ipsam recusandae, obcaecati nobis possimus veniam eos
-            officiis? Quaerat in eum consequatur! Possimus tempore, saepe quam
-            fugiat laboriosam fuga laudantium cum! Veritatis corporis vero
-            officia quod iusto. Numquam quis adipisci temporibus nesciunt
-            voluptatem facere autem libero, id eaque vel enim nulla dignissimos
-            dolores veniam harum fuga cum quasi tenetur aperiam obcaecati
-            accusantium. Delectus culpa doloribus velit fugit?
+            {post.content}
         </div>
 
         <Comment />
