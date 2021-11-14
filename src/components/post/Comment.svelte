@@ -1,3 +1,7 @@
+<script>
+    export let comment;
+</script>
+
 <div class="comment w-full px-12 p-3 bg-post-section text-sm">
     <div class="post-author flex text-sm">
         <img
@@ -7,18 +11,14 @@
         />
 
         <div class="w-full flex items-center">
-            <div class="font-semibold">Username</div>
+            <div class="font-semibold">{comment.author}</div>
             <div class="px-2">•</div>
-            <div>2 days ago</div>
+            <div>{new Date(Date.parse(comment.created_at)).toLocaleTimeString("pl-PL").slice(0, -3)}</div>
         </div>
     </div>
 
     <p class="pl-8">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde in animi
-        repudiandae reiciendis earum laborum rem. Nihil quia officia earum
-        excepturi odio fugiat ad ducimus at ab, tenetur iste debitis, animi quod
-        omnis aperiam adipisci iusto! Numquam, libero possimus. Nam dicta
-        corporis enim numquam, nesciunt rem eius totam est laboriosam?
+        {comment.content}
     </p>
 </div>
 

@@ -4,6 +4,7 @@
     import { plus, minus } from 'svelte-awesome/icons'
 
     export let post;
+    export let comments;
 </script>
 
 <div class="w-full mb-16 shadow-2xl">
@@ -36,8 +37,10 @@
             {post.content}
         </div>
 
-        <Comment />
-        <Comment />
+
+        {#each comments.slice(0,2) as comment}
+            <Comment {comment} />
+        {/each}
 
         <!-- <div class="w-full flex bg-white">
             <input

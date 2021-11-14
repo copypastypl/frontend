@@ -17,7 +17,7 @@
             <p>Trwa wczytywanie postów...</p>
         {:then data}
             {#each data.results as post}
-                <Post {post} />
+                <Post {post} comments={post.comments} />
             {/each}
         {:catch error}
             <p>Wystąpił niespodziewany błąd!</p>
