@@ -11,7 +11,7 @@
         />
 
         <div class="w-full flex items-center">
-            <div class="font-semibold">{comment.author}</div>
+            <div class="font-semibold">{comment.author.username}</div>
             <div class="px-2">•</div>
             <div>{new Date(Date.parse(comment.created_at)).toLocaleTimeString("pl-PL").slice(0, -3)}</div>
         </div>
